@@ -1,12 +1,16 @@
 const API = {
   async getLastWorkout() {
     let res;
+    // console.log(`/public/api.js | WHAT IS res BEFORE FETCH?`, res.json())
     try {
       res = await fetch("/api/workouts");
+      // console.log(`/public/api.js | WHAT IS res AFTER FETCH?  `, res.json())
     } catch (err) {
       console.log(err)
     }
+    
     const json = await res.json();
+    console.log(`getLastWorkout - anything:  `, json)
 
     // return json[json.length - 1];
     return json[json.length];
