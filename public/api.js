@@ -10,10 +10,9 @@ const API = {
     }
     
     const json = await res.json();
-    console.log(`getLastWorkout - anything:  `, json)
 
     // return json[json.length - 1];
-    return json[json.length];
+    return json[json.length - 1];
   },
   async addExercise(data) {
     const id = location.search.split("=")[1];

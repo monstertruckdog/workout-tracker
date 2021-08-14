@@ -6,7 +6,6 @@ const Workout = require('../models/workout.js');
 // const app = express();
 
 router.get('/api/workouts', (req, res) => {
-  console.log(`get...workouts - desparation:  router.get.../api/workouts is about to fire`)
   Workout.find()
   // db.workouts.find({})
     .then(dbWorkoutData => {
